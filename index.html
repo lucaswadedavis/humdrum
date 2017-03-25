@@ -9,5 +9,23 @@
     setInterval(function() {
       document.body.style.backgroundColor = (white = !white) ? '#fff' : '#000';
     }, 250);
+
+    /*
+    // turns out the requestAnimationFrame method is just as bad,
+    // and more verbose.
+    var white = true;
+    var start;
+
+    function step(now) {
+      if (!start) start = now;
+      if (now - start >= 25) {
+        start = now;
+        document.body.style.backgroundColor = (white = !white) ? '#fff' : '#000';
+      }
+      requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+    */
   </script>
 </html>
